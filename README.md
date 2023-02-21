@@ -1,5 +1,6 @@
 # Notty
 A notes taking app to easily capture and organize their thoughts, ideas, reminders, and to-do lists.
+No body does it better.
 
 ## Installation
 
