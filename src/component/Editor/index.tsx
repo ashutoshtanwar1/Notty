@@ -40,6 +40,7 @@ const Editor: FC = () => {
       id="editor"
       className="h-screen w-screen inline-block text-white outline-none py-6 px-12 whitespace-pre"
       contentEditable
+      spellCheck={false}
       suppressContentEditableWarning
       onPaste={onPasteHandle}
       onInput={onTextChangeHandle}

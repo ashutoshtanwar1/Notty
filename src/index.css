@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode.ttf) format('truetype');
+}
+
 :root {
-  font-family: 'Fira Code', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 600;
-  font-size: 22px;
-
   background-color: black;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Fira Code', monospace, system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 32px;
 }

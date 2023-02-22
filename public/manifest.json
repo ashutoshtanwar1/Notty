@@ -1,7 +1,8 @@
 {
     "manifest_version": 3,
     "name": "Notty",
-    "version": "1.0.0",
+    "version": "1",
+    "author": "Ashutosh Tanwar",
     "description": "A notes taking app to easily capture and organize their thoughts, ideas, reminders, and to-do lists.",
     "chrome_url_overrides": {
         "newtab": "index.html"
