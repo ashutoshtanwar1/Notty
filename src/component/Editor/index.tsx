@@ -12,26 +12,17 @@ const Editor: FC = () => {
   const onTextChangeHandle = (e: any) => {
     localStorage.setItem(
       KEY,
-      JSON.stringify(e.currentTarget.innerText, null, 0)
+      JSON.stringify(e.currentTarget.innerHTML, null, 0)
     );
   };
 
   const handleKeyDown = (e: any) => {
     if (e.keyCode === 9) {
       e.preventDefault();
-
-      const editor = document.getElementById("editor");
-      const doc = editor?.ownerDocument.defaultView;
-      const sel = doc?.getSelection();
-      const range = sel?.getRangeAt(0);
-
-      const tabNode = document.createTextNode("\u00a0\u00a0\u00a0\u00a0");
-      range?.insertNode(tabNode);
-
-      range?.setStartAfter(tabNode);
-      range?.setEndAfter(tabNode);
-      sel?.removeAllRanges();
-      if (range) sel?.addRange(range);
+    }
+    if (e.keyCode === 189) {
+      e.preventDefault();
+      document?.execCommand("insertOrderedList");
     }
   };
 
@@ -46,9 +37,10 @@ const Editor: FC = () => {
       onInput={onTextChangeHandle}
       onBlur={onTextChangeHandle}
       onKeyDown={handleKeyDown}
-    >
-      {JSON.parse(localStorage.getItem(KEY) ?? '""')}
-    </div>
+      dangerouslySetInnerHTML={{
+        __html: JSON.parse(localStorage.getItem(KEY) ?? '""'),
+      }}
+    />
   );
 };
 
