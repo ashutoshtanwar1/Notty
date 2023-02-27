@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Fira Code';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url(../public/fonts/FiraCode.ttf) format('truetype');
-}
-
 :root {
   background-color: black;
   font-synthesis: none;
@@ -22,6 +14,46 @@
 body {
   font-family: 'Fira Code', monospace, system-ui, sans-serif;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 32px;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../public/fonts/FiraCode-Bold.ttf) format('truetype');
 }
